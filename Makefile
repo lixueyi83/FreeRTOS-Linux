@@ -11,12 +11,12 @@ SRCROOT         = $(CURDIR)
 ODIR            = obj
 
 # Source VPATHS
-VPATH           += $(SRCROOT)/Source
-VPATH	        += $(SRCROOT)/Source/portable/MemMang
-VPATH	        += $(SRCROOT)/Source/portable/GCC/POSIX
-VPATH           += $(SRCROOT)/Demo
-VPATH			+= $(SRCROOT)/Project/FileIO
-VPATH			+= $(SRCROOT)/Project
+VPATH           += $(SRCROOT)/source
+VPATH	        += $(SRCROOT)/source/portable/MemMang
+VPATH	        += $(SRCROOT)/source/portable/GCC/POSIX
+VPATH           += $(SRCROOT)/demo
+VPATH			+= $(SRCROOT)/proj/FileIO
+VPATH			+= $(SRCROOT)/proj
 
 # FreeRTOS Objects
 C_FILES			+= croutine.c
@@ -57,10 +57,10 @@ C_FILES			+= TimerDemo.c
 C_FILES			+= main.c
 
 # Include Paths
-INCLUDES        += -I$(SRCROOT)/Source/include
-INCLUDES        += -I$(SRCROOT)/Source/portable/GCC/POSIX/
-INCLUDES        += -I$(SRCROOT)/Demo/include
-INCLUDES        += -I$(SRCROOT)/Project
+INCLUDES        += -I$(SRCROOT)/source/include
+INCLUDES        += -I$(SRCROOT)/source/portable/GCC/POSIX/
+INCLUDES        += -I$(SRCROOT)/demo/include
+INCLUDES        += -I$(SRCROOT)/proj
 
 # Generate OBJS names
 OBJS = $(patsubst %.c,%.o,$(C_FILES))
