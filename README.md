@@ -9,3 +9,9 @@ Directory description
 - source: FreeRTOS kernel and POSIX simulator source files
 - proj: the project directory that includes main() and FreeRTOS settings for the POSIX port
 - demo: demo tasks from the official FreeRTOS release
+
+
+
+Issue Fix:
+1. fatal error: sys/cdefs.h
+    $ sudo apt-get install g++-multilib
